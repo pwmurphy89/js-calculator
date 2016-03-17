@@ -60,3 +60,18 @@ body {
 .jump {
 	border: 2px solid black;
 }
+
+.spin {
+	transform: rotate(360deg);
+    border-radius: 10%;
+    transition: all 3s ease-out;
+    border: 3px #f00 solid;
+}
+
+.flip {
+	transform: rotate(180deg);
+    border-radius: 10%;
+    transition: all 3s ease-out;
+    border: 3px #f00 solid;
+
+}
