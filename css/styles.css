@@ -50,3 +50,13 @@ body {
 	color: #888;
 	user-select: none;
 }
+
+#surprise {
+	width: 50px;
+	height: 40px;
+	background-color: blue;
+}
+
+.jump {
+	border: 2px solid red;
+}

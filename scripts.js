@@ -97,6 +97,9 @@ function doIt() {
 		}
 	}
 	$(".screen").val(total);
+	if (total = 21){
+		$("#surprise").addClass("jump");
+	}
 	
 }
 function insertVal(val) {
