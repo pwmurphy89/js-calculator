@@ -57,6 +57,33 @@ body {
 	background-color: blue;
 }
 
+
 .jump {
 	border: 2px solid black;
+}
+
+.spin {
+	transform: rotate(360deg);
+    border-radius: 10%;
+    transition: all 3s ease-out;
+    border: 3px #f00 solid;
+}
+
+.flip {
+	transform: rotate(180deg);
+    border-radius: 10%;
+    transition: all 3s ease-out;
+    border: 3px #f00 solid;
+
+}
+.background-image {
+	background-image: url("eazy-e.jpg")
+}
+
+
+#surprise {
+  transition: transform 1s;
+}
+#surprise:hover {
+  transform: translate(20px, 20px);
 }

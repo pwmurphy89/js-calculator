@@ -47,10 +47,10 @@ $(document).ready(function() {
 				$(".screen").val(currScreenVal + "+");
 				break;
 			}
-			case 187: {
-				doIt();
-				break;
-			}
+			// case 187: {
+			// 	doIt();
+			// 	break;
+			//}
 			case 189: {
 				$(".screen").val(currScreenVal + "-");
 				break;
@@ -73,7 +73,10 @@ $(document).ready(function() {
 			}
 			case 13: {
 				doIt();
-				
+				break;
+			}
+			case 190: {
+				$(".screen").val(currScreenVal + ".");
 				break;
 			}
 		}
@@ -97,10 +100,19 @@ function doIt() {
 		}
 	}
 	$(".screen").val(total);
-	if (total = 21){
-		$("#surprise").addClass("jump");
+	if (total === 1){
+		$("#surprise").addClass("move");
+	} else if (total === 2){
+		$(".container").addClass("background-image");
 	}
-	
+
+	else if (total > 1000000){
+		window.open("http://www.google.com");
+	} else if (total === 360){
+		$("#calculator").addClass("spin");
+	}else if(total === 07734){
+			$("#calculator").addClass("flip");
+		}
 }
 function insertVal(val) {
 	var currScreenVal = $(".screen").val();
@@ -108,6 +120,7 @@ function insertVal(val) {
 }
 
 function clearScreen() {
+	$("#calculator").removeClass("flip");
 	$(".screen").val("");
 
 }
