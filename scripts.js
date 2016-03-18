@@ -73,7 +73,10 @@ $(document).ready(function() {
 			}
 			case 13: {
 				doIt();
-				
+				break;
+			}
+			case 190: {
+				$(".screen").val(currScreenVal + ".");
 				break;
 			}
 		}
@@ -97,9 +100,13 @@ function doIt() {
 		}
 	}
 	$(".screen").val(total);
-	if (total === 21){
-		$("#surprise").addClass("jump");
-	} else if (total > 1000000){
+	if (total === 1){
+		$("#surprise").addClass("move");
+	} else if (total === 2){
+		$(".container").addClass("background-image");
+	}
+
+	else if (total > 1000000){
 		window.open("http://www.google.com");
 	} else if (total === 360){
 		$("#calculator").addClass("spin");
@@ -113,6 +120,7 @@ function insertVal(val) {
 }
 
 function clearScreen() {
+	$("#calculator").removeClass("flip");
 	$(".screen").val("");
 
 }
